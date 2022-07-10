@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio with Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: content-box;
+            font-family: Lato;
+        }
+
+        body {
+            color: #2b323c;
+        }
+
+        .navbar {
+            padding-bottom: 12px;
+        }
+
+        .navbar-collapse .nav-link:nth-child(1) {
+            margin-top: 4px;
+            margin-right: 6px;
+            padding: 2px 6px;
+        }
+
+        .dropdown-menu .dropdown-item {
+            width: var(--bs-dropdown-min-width);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+        }
+    </style>
+
+    <div class="main">
+        <!-- navbar -->
+        <div class="navbar navbar-expand-sm sticky-top bg-success">
+            <div class="container-md">
+                <div class="container-fluid">
+                    <a class="text-light navbar-brand" href="">Mo Sefatullah</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-3 navbar-nav-scroll nav-pills" style="--bs-scroll-height: 100px;">
+
+                        <li class="nav-item mx-1">
+                            <a class="nav-link border border-light text-light" aria-current="page"
+                                href="#">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item mx-1">
+                            <a class="nav-link text-light" href="#">Service</a>
+                        </li>
+
+                        <li class="nav-item mx-1 dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarScrollingDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aaria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">Customer support</a></li>
+                                <li><a class="dropdown-item" href="#">Contact online</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Join for better</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid p-0 position-relative w-100">
+            <div class="position-absolute bg-success w-100" style="height: 1500px !important;">
+                <div class="w-100 h-100"
+                    style="background-color: rgba(255, 255, 255, 0.8);background-image:url(poster.png);background-size:130%;background-position:bottom;background-repeat:no-repeat">
+                    <div id="typed-strings">
+                        <p>I am Mohammad sefatullah</p>
+                        <p>Web Developing is a hobby to me,</p>
+                        <p>So i am learning development, though</p>
+                        <p>I am a Web Designer</p>
+                    </div>
+                    <div class="p-4">
+                        <img src="profile.jpg" class="m-5 border border-success" alt="Mohammad Sefatullah"
+                            style="width:200px;height:250px;object-fit:cover;">
+                        <h1 class="m-0 p-4"><span class="m-0 p-4" id="typed"></span></h1>
+                        <h3 class="pt-1 px-5" style="line-height: 40px;font-weight: normal;">Web Design and Graphic
+                            Design both have many demand at present. My target is to be a Professional Web Designer and
+                            Web Developer. Now i am a junior web designer and started learning backend web development.
+                        </h3>
+                        <div class="container p-4" style="margin-top: 100px;"><div class="list">
+                            <h2>Services</h2>
+                            <ul class="list-group">
+                                <li class="list-group-item">Building simple websites</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A fourth item</li>
+                                <li class="list-group-item">And a fifth one</li>
+                            </ul>
+                        </div>
+                        </div>
+                        <p>
+                            That's all about myself. If you are interested to work. I promise you are going to get back for more. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = () => {
+            document.querySelectorAll(".wrapper")[0].style.height = "calc(100vh - " + document.querySelectorAll(".navbar")[0].clientHeight + "px)";
+        }
+
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 70,
+            cursorChar: '<div style="margin-left:-10px;display:inline-block;width:2px;height:20px;background-color:#333"></div>'
+        });
+    </script>
+</body>
+
+</html>
